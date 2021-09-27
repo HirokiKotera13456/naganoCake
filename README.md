@@ -21,6 +21,21 @@ Admin.create!(
   password: "111111",
   )
   
+    50.times do |n|
+    Member.create!(
+      last_name: "テスト#{n + 1}号",
+      first_name: "太郎",
+      last_name_kana: "テスト",
+      first_name_kana: "タロウ",
+      postal_code: "1234567",
+      address: "長野県カフェ市#{n + 1}区",
+      telephone_number: "01234567890",
+      email: "tester#{n + 1}@test.com",
+      password: "111111",
+    )
+  end
+  <!--50人のサンプルデータ作成します-->
+  
 Genre.create!(
     name: "ケーキ"
 )
@@ -32,7 +47,7 @@ Product.create!(
     is_active: true
 )
 Product.create!(
-    genre_id: 1,
+    genre_id: 2,
     name: "チョコケーキ",
     introduction: "チョコレートケーキだよ",
     price: 398,
